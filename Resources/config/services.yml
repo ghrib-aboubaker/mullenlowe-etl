@@ -1,4 +1,8 @@
+parameters:
+  mullenlowe.etl.foo.class: Mullenlowe\EtlBundle\Service\ClassA
+
 services:
-#    mullenlowe_etl.example:
-#        class: Mullenlowe\EtlBundle\Example
-#        arguments: ["@service_id", "plain_value", "%parameter%"]
+    _defaults: { autowire: true }
+
+    mullenlowe.etl.foo:
+      class: %mullenlowe.etl.foo.class%
