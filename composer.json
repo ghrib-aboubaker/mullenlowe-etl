@@ -1,0 +1,22 @@
+{
+    "name" : "mullenlowe/etlbundle",
+    "description" : "Mullenlowe ETL symfony bundle tool that helps database migration",
+    "type" : "symfony-bundle",
+    "require" : {
+        "php": ">=7"
+    },
+    "autoload" : {
+        "psr-0" : {
+            "Company\\DemoBundle" : ""
+        }
+    },
+    "target-dir" : "Company/DemoBundle",
+    "autoload": {
+        "psr-4": {
+            "Mullenlowe\\EtlBundle\\": ""
+        }
+    }
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "prefer-dist": true
+}
