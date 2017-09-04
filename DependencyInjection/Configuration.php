@@ -21,14 +21,17 @@ class Configuration implements ConfigurationInterface
         $rootNode = $treeBuilder->root('mullenlowe_etl');
 
         $rootNode
+            ->addDefaultsIfNotSet()
             ->children()
                 ->scalarNode('param1')
                     ->isRequired()
                     ->cannotBeEmpty()
+                    ->defaultValue('azerty')
                 ->end() // end param1
                 ->scalarNode('param2')
                     ->isRequired()
-                    ->cannotBeEmpty()
+                    ->cannotBeEmpty()                    
+                    ->defaultValue('qwerty')
                 ->end() // end param2
             ->end();
 
