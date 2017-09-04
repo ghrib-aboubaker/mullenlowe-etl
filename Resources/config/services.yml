@@ -6,3 +6,4 @@ services:
 
     mullenlowe.etl.foo:
       class: %mullenlowe.etl.foo.class%
+      arguments: [ '%param1%', '%param2%' ]
