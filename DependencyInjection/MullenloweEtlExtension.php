@@ -22,9 +22,6 @@ class MullenloweEtlExtension extends Extension
         $configuration = new Configuration();
         $config = $this->processConfiguration($configuration, $configs);
 
-        $container->setParameter('param1', $config['param1']);
-        $container->setParameter('param2', $config['param2']);
-
         $loader = new Loader\YamlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
         $loader->load('services.yml');
     }
